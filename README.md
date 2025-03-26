@@ -1,54 +1,35 @@
-# React + TypeScript + Vite
+## 🚀 **Running the Project Locally**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Follow these steps to get the project up and running on your local machine:**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📁 1. Clone the repository
+Open your terminal and run the following command (replace the URL with your project's repo URL):
 
-## Expanding the ESLint configuration
+<pre> <code>git clone https://github.com/powercoder-hackers/swiss-hack-front.git
+cd project-name</code> </pre>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+📥 2. Install dependencies
+Make sure you have Node.js and npm installed. Then, install all required packages:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+<pre> <code>npm install</code> </pre>
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This installs all dependencies listed in package.json (e.g., React, Vite, Tailwind CSS, React Router DOM, TypeScript, etc.).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🧪 3. Run the development server
+Start the app in development mode using Vite:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+<pre> <code>npm run dev</code> </pre>
+
+
+🏗️ 4. Build for production
+Create an optimized production build:
+
+<pre> <code>npm run build</code> </pre>
+The final files will be generated in the dist/ folder. This is what you'd deploy to a production server.
+
+🔍 5. Preview the production build locally
+To simulate the production environment locally:
+
+<pre> <code>npm run preview</code> </pre>
